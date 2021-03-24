@@ -1,5 +1,6 @@
 import path from "path";
 import { Configuration } from "webpack";
+import CopyPlugin = require("copy-webpack-plugin");
 
 const config: Configuration = {
     mode: "development",
@@ -30,7 +31,7 @@ const config: Configuration = {
         extensions: [".ts", ".tsx", ".js", ".jsx"],
     },
     devServer: {
-        contentBase: path.join(__dirname, "static"),
+        contentBase: path.join(__dirname, "dist"),
         open: true,
         port: 8080,
     },
