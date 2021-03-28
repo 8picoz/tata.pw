@@ -6,4 +6,4 @@ const Top: React.FC = () => {
     );
 };
 
-export default Top;
+export { Top };
