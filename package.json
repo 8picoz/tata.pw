@@ -1,7 +1,7 @@
 {
-  "name": "Typescript-Playground",
+  "name": "tata.pw",
   "version": "1.0.0",
-  "description": "",
+  "description": "tata's homepage",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve",
@@ -12,8 +12,8 @@
     "url": "git+https://github.com/8picomu/Typescript-Playground.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "author": "Yuya Ohta <8picomu@gmail.com>",
   "bugs": {
     "url": "https://github.com/8picomu/Typescript-Playground/issues"
   },
