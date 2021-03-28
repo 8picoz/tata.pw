@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/8picomu/Typescript-Playground#readme",
   "dependencies": {
+    "navi": "^0.14.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-navi": "^0.14.4",
     "react-redux": "^7.2.3",
     "redux": "^4.0.5"
   },
