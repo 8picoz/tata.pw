@@ -1,8 +1,15 @@
 import React from "react";
+import { Router, View } from "react-navi";
+import { routes } from "../lib/routes";
+import { Layout } from "./Layout";
 
 const App: React.FC = () => {
     return (
-        <div>Hello</div>
+        <Router routes={routes}>
+            <Layout>
+                <View />
+            </Layout>
+        </Router>
     );
 };
 
