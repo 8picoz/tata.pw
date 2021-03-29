@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Router, View } from "react-navi";
 import { routes } from "../lib/routes";
 import { Layout } from "./Layout";
@@ -6,9 +6,11 @@ import { Layout } from "./Layout";
 const App: React.FC = () => {
     return (
         <Router routes={routes}>
-            <Layout>
-                <View />
-            </Layout>
+            <Suspense fallback={<h1>Loading view...</h1>}>
+                <Layout>
+                    <View />
+                </Layout>
+            </Suspense>
         </Router>
     );
 };
