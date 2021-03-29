@@ -1,4 +1,4 @@
-const WEBGL_PLAYGROUND = "/WebGlPlaygroud";
 const ROOT = "/";
+const WEBGL_PLAYGROUND = "/webglplayground";
 
-export { WEBGL_PLAYGROUND, ROOT };
+export { ROOT, WEBGL_PLAYGROUND };

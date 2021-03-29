@@ -7,5 +7,5 @@ export const routes = mount({
         title: "tata.pw",
         view: <Top />,
     }),
-    "/WebGLPlayground": lazy(() => import("./webgl")),
+    "/webglplayground": lazy(() => import("./webgl")),
 });
