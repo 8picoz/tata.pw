@@ -16,7 +16,8 @@
         "noImplicitReturns": true,
         "noFallthroughCasesInSwitch": true,
         "moduleResolution": "node",
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "plugins": [{ "name": "typescript-styled-plugin" }]
     },
     "include": ["src/**/*"]
 }
