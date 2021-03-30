@@ -39,7 +39,13 @@ module.exports = {
             },
             {
                 test: /\.css/,
+                exclude: /node_modules/,
                 use: [ "style-loader", { loader: "css-loader", options: { url: false } }],
+            },
+            {
+                test: /\.(glsl|vs|fs|vert|frag)$/,
+                exclude: /node_modules/,
+                use: [ "raw-loader" ],
             },
         ],
     },

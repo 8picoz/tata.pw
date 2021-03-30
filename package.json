@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/8picomu/Typescript-Playground/issues"
   },
-  "homepage": "tata.pw",
+  "homepage": ".",
   "dependencies": {
     "navi": "^0.14.0",
     "react": "^17.0.2",
@@ -38,6 +38,7 @@
     "copy-webpack-plugin": "^8.1.0",
     "cross-env": "^7.0.3",
     "css-loader": "^5.1.4",
+    "raw-loader": "^4.0.2",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.18",
     "ts-node": "^9.1.1",
