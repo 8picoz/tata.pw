@@ -1,11 +1,10 @@
 import React from "react";
 import { NotFoundBoundary } from "react-navi";
-import styled from "styled-components";
 import { NotFound } from "./organisms/NotFound";
+import styled from "styled-components";
 
 const PageContainer = styled.div`
-    margin: 0 auto;
-    margin-top: 50px;
+
 `;
 
 const Layout: React.FC = ({ children }) => {
