@@ -47,6 +47,13 @@ module.exports = {
                 exclude: /node_modules/,
                 use: [ "raw-loader" ],
             },
+            {
+                test: /\.(svg)$/,
+                loader: "file-loader",
+                options: {
+                    name: "[path][name].[ext]",
+                },
+            },
         ],
     },
     
