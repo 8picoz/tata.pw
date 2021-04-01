@@ -6,6 +6,7 @@ import { App } from "./components/App";
 const GlobalStyle = createGlobalStyle`
     body {
         background-color: #EEEEEE;
+        font-family: sans-serif;
     }
 `;
 
