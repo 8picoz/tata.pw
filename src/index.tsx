@@ -7,6 +7,8 @@ const GlobalStyle = createGlobalStyle`
     body {
         background-color: #EEEEEE;
         font-family: sans-serif;
+        margin: 0;
+        padding: 0;
     }
 `;
 
