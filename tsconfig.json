@@ -17,7 +17,10 @@
         "noFallthroughCasesInSwitch": true,
         "moduleResolution": "node",
         "esModuleInterop": true,
-        "plugins": [{ "name": "typescript-styled-plugin" }]
+        "plugins": [{ "name": "typescript-styled-plugin" }],
+        "baseUrl": "./",
+        "paths": {"svg": ["types/svg"]},
+        "typeRoots": ["types", "node_modules/@types"]
     },
     "include": ["src/**/*"]
 }
