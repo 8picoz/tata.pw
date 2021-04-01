@@ -13,5 +13,4 @@ ReactDOM.render(
     <>
         <GlobalStyle />
         <App />
-    </>
-    , document.getElementById("app"));
+    </>, document.getElementById("app"));
