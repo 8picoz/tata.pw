@@ -11,7 +11,7 @@ interface BarItemProps {
 
 const Container = styled.ul`
     width: 500px;
-    height: 500px;
+    height: 300px;
     margin: 0;
     padding: 0;
     bottom: 0;

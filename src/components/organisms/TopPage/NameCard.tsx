@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-navi";
 import styled from "styled-components";
-import { WEBGL_PLAYGROUND } from "../../../lib/constants/path";
 
 const CardContainer = styled.div`
 
@@ -27,9 +25,6 @@ const NameCard: React.FC = () => {
     return (
         <CardContainer>
             <p>{CardNameContent.name}</p>
-            <Link href={WEBGL_PLAYGROUND}>
-                <p>to webgl playgroud</p>
-            </Link>
         </CardContainer>
     );
 };
