@@ -1,7 +1,7 @@
 import React from "react";
 import { NotFoundBoundary } from "react-navi";
-import { NotFound } from "./organisms/NotFound";
 import styled from "styled-components";
+import { NotFound } from "./organisms/NotFound";
 import { LowNaviBar } from "./shared/LowNavBar/LowNavBar";
 
 const PageContainer = styled.div`
@@ -20,3 +20,4 @@ const Layout: React.FC = ({ children }) => {
 };
 
 export { Layout };
+

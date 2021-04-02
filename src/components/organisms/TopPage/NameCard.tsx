@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
 import icon from "./assets/tata.svg";
+
 
 const CardContainer = styled.div`
 
@@ -33,3 +33,4 @@ const NameCard: React.FC = () => {
 };
 
 export { NameCard };
+

@@ -34,3 +34,4 @@ const VerticalBarItem: React.FC<BarItemProps> = React.memo(props => {
 });
 
 export { VerticalBarItem };
+

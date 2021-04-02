@@ -36,3 +36,4 @@ const HorizontalBarItem: React.FC<BarItemProps> = React.memo(props => {
 });
 
 export { HorizontalBarItem };
+
