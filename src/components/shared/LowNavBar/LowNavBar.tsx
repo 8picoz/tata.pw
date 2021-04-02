@@ -18,18 +18,17 @@ const Container = styled.ul`
     z-index: 1;
     overflow: hidden;
     list-style: none;
-    display:-webkit-box;
-  	display:-ms-flexbox;
-  	display:flex;
+    display: -webkit-box;
+  	display: -ms-flexbox;
+  	display: flex;
   	-webkit-box-direction: normal;
   	-ms-flex-direction: column;
   	flex-direction: column;
     -webkit-justify-content: space-around;
-    -ms-justify-content    : space-around;
-    justify-content        : space-around;
+    -ms-justify-content: space-around;
+    justify-content: space-around;
 `;
 
-//[TODO] センタリング
 const LowNaviBar: React.FC = React.memo(() => {
     return (
         <Container>
