@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import icon from "./tata.svg";
+import icon from "./assets/tata.svg";
 
 const CardContainer = styled.div`
 
