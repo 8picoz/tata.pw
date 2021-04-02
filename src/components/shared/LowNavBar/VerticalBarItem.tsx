@@ -8,8 +8,8 @@ const VerticalBarItemContainer = styled.li`
     height: 100px;
     writing-mode: vertical-rl;
     text-align: center;
-    color: #FFFFFF;
-    background-color: #000000;
+    color: #DDDDDD;
+    background-color: #333333;
     margin: 40px 0;
     cursor: pointer;
     transition: all 0.1s;
