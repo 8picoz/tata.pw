@@ -5,17 +5,17 @@ import { BarItemProps } from "./LowNavBar";
 
 const VerticalBarItemContainer = styled.li`
     width: 30px;
-    height: 100px;
+    height: 150px;
     writing-mode: vertical-rl;
     text-align: center;
     color: #DDDDDD;
     background-color: #333333;
-    margin: 40px 0;
     cursor: pointer;
     transition: all 0.1s;
 
     a {
         user-select: none;
+        font-size: 17px;
     }
 
     :hover {

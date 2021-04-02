@@ -18,24 +18,26 @@ const Container = styled.ul`
     z-index: 1;
     overflow: hidden;
     list-style: none;
-`;
-
-const VerticalBarContainer = styled.div`
-    position: absolute;
-    top: 0;
+    display:-webkit-box;
+  	display:-ms-flexbox;
+  	display:flex;
+  	-webkit-box-direction: normal;
+  	-ms-flex-direction: column;
+  	flex-direction: column;
+    -webkit-justify-content: space-around;
+    -ms-justify-content    : space-around;
+    justify-content        : space-around;
 `;
 
 //[TODO] センタリング
 const LowNaviBar: React.FC = React.memo(() => {
     return (
         <Container>
-            <VerticalBarContainer>
-                <VerticalBarItem link={ROOT} description={"Top"} />
-                <VerticalBarItem link={WEBGL_PLAYGROUND} description={"WebGL Playground"} />
-                <VerticalBarItem link={BLOG} description={"blog"} />
-                <VerticalBarItem link={LINK} description={"link"} />
-                <VerticalBarItem link={CONTACT} description={"contact"} />
-            </VerticalBarContainer>
+            <VerticalBarItem link={ROOT} description={"Top"} />
+            <VerticalBarItem link={WEBGL_PLAYGROUND} description={"WebGL Playground"} />
+            <VerticalBarItem link={BLOG} description={"blog"} />
+            <VerticalBarItem link={LINK} description={"link"} />
+            <VerticalBarItem link={CONTACT} description={"contact"} />
         </Container>
     );
 });
