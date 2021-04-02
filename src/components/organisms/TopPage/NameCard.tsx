@@ -5,18 +5,64 @@ import icon from "./assets/tata.svg";
 
 const CardContainer = styled.div`
     color: #DDDDDD;
+    height: 300px;
+    width: 500px;
+    border: 1px groove #DDDDDD;
+    box-shadow:1px 1px;
+    display:-webkit-box;
+  	display:-ms-flexbox;
+  	display:flex;
+    -webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+    -webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+`;
+
+const CardImageContainer = styled.div`
+    width: 50%;
+    height: 100%;
+
+    img {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+    }
+`;
+
+const CardContentContainer = styled.div`
+    width: 50%;
+    height: 100%;
+    display:-webkit-box;
+  	display:-ms-flexbox;
+  	display:flex;
+    -webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+    -webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+`;
+
+const PTagContainer = styled.div`
+
+    p {
+        text-align: center;
+        font-size: 20px;
+    }
 `;
 
 interface CardNameContentType {
     name: string;
-    description: string;
     twitterID: string;
     githubID: string;
 };
 
 const CardNameContent: CardNameContentType = {
-    name: "太田 侑冶",
-    description: "色々やりたいです",
+    name: "Ohta Yuya",
     twitterID: "8picomu",
     githubID: "8picomu",
 };
@@ -25,11 +71,14 @@ const NameCard: React.FC = () => {
 
     return (
         <CardContainer>
-            <img src={icon} width={200} height={200} />
-            <p>{CardNameContent.name}</p>
-            <p>{CardNameContent.description}</p>
-            <p>{CardNameContent.twitterID}</p>
-            <p>{CardNameContent.githubID}</p>
+            <CardImageContainer><img src={icon} width={200} height={200} /></CardImageContainer>
+            <CardContentContainer>
+                <PTagContainer>
+                    <p>{CardNameContent.name}</p>
+                    <p>{CardNameContent.twitterID}</p>
+                    <p>{CardNameContent.githubID}</p>
+                </PTagContainer>
+            </CardContentContainer>
         </CardContainer>
     );
 };

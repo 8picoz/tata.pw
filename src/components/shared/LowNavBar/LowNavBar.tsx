@@ -25,6 +25,7 @@ const VerticalBarContainer = styled.div`
     top: 0;
 `;
 
+//[TODO] センタリング
 const LowNaviBar: React.FC = React.memo(() => {
     return (
         <Container>
