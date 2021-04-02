@@ -1,8 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { ROOT, WEBGL_PLAYGROUND, LINK, CONTACT } from "../../../lib/constants/path";
+import { BLOG, CONTACT, LINK, ROOT, WEBGL_PLAYGROUND } from "../../../lib/constants/path";
 import { VerticalBarItem } from "./BarItem/VerticalBarItem";
-import { HorizontalBarItem } from "./BarItem/HorizontalBarItem";
 
 interface BarItemProps {
     link: string;
@@ -10,11 +9,11 @@ interface BarItemProps {
 };
 
 const Container = styled.ul`
-    width: 500px;
-    height: 300px;
+    width: 700px;
+    height: 100%;
     margin: 0;
     padding: 0;
-    bottom: 0;
+    top: 0;
     position: fixed;
     z-index: 1;
     overflow: hidden;
@@ -23,7 +22,7 @@ const Container = styled.ul`
 
 const BarContainer = css`
     position: absolute;
-    bottom: 0;
+    top: 0;
 `;
 
 const VerticalBarContainer = styled.div`
@@ -32,22 +31,22 @@ const VerticalBarContainer = styled.div`
 
 const HorizontalBarContainer = styled.div`
     ${BarContainer}
-    padding: 0 10px;
+    padding: 0 20px;
 `;
 
 const LowNaviBar: React.FC = React.memo(() => {
     return (
         <Container>
             <VerticalBarContainer>
-                <VerticalBarItem link={CONTACT} description={"contact"} />
+                <VerticalBarItem link={ROOT} description={"Top"} />
+                <VerticalBarItem link={WEBGL_PLAYGROUND} description={"WebGL Playground"} />
+                <VerticalBarItem link={BLOG} description={"blog"} />
                 <VerticalBarItem link={LINK} description={"link"} />
+                <VerticalBarItem link={CONTACT} description={"contact"} />
             </VerticalBarContainer>
-            <HorizontalBarContainer>
-                <HorizontalBarItem link={ROOT} description={"Top"} />
-                <HorizontalBarItem link={WEBGL_PLAYGROUND} description={"WebGL PlayGround"} />
-            </HorizontalBarContainer>
         </Container>
     );
 });
 
 export { LowNaviBar, BarItemProps };
+

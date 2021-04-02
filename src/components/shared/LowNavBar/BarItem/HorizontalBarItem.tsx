@@ -6,18 +6,25 @@ import { textStyle } from "./textStyle";
 
 const HorizontalBarItemContainer = styled.li`
     width: 180px;
-    height: 20px;
-    margin: 0 10px;
+    height: 35px;
+    margin: 0 20px;
     color: #FFFFFF;
     text-align: center;
     background-color: #000000;
     cursor: pointer;
     transition: all 0.2s;
-    bottom: 0;
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: top;
 
     ${ textStyle }
+
+    a {
+        bottom: 0;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        vertical-align: bottom;
+    }
 
     :hover {
         height: 80px;

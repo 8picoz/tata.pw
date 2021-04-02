@@ -21,7 +21,6 @@ const CardNameContent: CardNameContentType = {
     githubID: "8picomu",
 };
 
-//[TODO]: 普段の画像を板ポリのモデルに変換してWebGLから色々いじる
 const NameCard: React.FC = () => {
 
     return (
