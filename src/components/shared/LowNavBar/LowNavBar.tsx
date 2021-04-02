@@ -29,11 +29,6 @@ const VerticalBarContainer = styled.div`
     ${BarContainer}
 `;
 
-const HorizontalBarContainer = styled.div`
-    ${BarContainer}
-    padding: 0 20px;
-`;
-
 const LowNaviBar: React.FC = React.memo(() => {
     return (
         <Container>
