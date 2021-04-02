@@ -57,14 +57,12 @@ const PTagContainer = styled.div`
 
 interface CardNameContentType {
     name: string;
-    twitterID: string;
-    githubID: string;
+    HN: string;
 };
 
 const CardNameContent: CardNameContentType = {
     name: "Ohta Yuya",
-    twitterID: "8picomu",
-    githubID: "8picomu",
+    HN: "tata",
 };
 
 const NameCard: React.FC = () => {
@@ -75,8 +73,7 @@ const NameCard: React.FC = () => {
             <CardContentContainer>
                 <PTagContainer>
                     <p>{CardNameContent.name}</p>
-                    <p>{CardNameContent.twitterID}</p>
-                    <p>{CardNameContent.githubID}</p>
+                    <p>{CardNameContent.HN}</p>
                 </PTagContainer>
             </CardContentContainer>
         </CardContainer>
