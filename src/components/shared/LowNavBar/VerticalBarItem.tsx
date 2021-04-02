@@ -1,11 +1,10 @@
 import React, { useCallback } from "react";
 import { useNavigation } from "react-navi";
 import styled from "styled-components";
-import { BarItemProps } from "../LowNavBar";
-import { textStyle } from "./textStyle";
+import { BarItemProps } from "./LowNavBar";
 
 const VerticalBarItemContainer = styled.li`
-    width: 35px;
+    width: 30px;
     height: 100px;
     writing-mode: vertical-rl;
     text-align: center;
@@ -13,9 +12,11 @@ const VerticalBarItemContainer = styled.li`
     background-color: #000000;
     margin: 40px 0;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.1s;
 
-    ${ textStyle }
+    a {
+        user-select: none;
+    }
 
     :hover {
         width: 80px;

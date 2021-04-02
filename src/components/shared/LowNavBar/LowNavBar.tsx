@@ -1,7 +1,7 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { BLOG, CONTACT, LINK, ROOT, WEBGL_PLAYGROUND } from "../../../lib/constants/path";
-import { VerticalBarItem } from "./BarItem/VerticalBarItem";
+import { VerticalBarItem } from "./VerticalBarItem";
 
 interface BarItemProps {
     link: string;
@@ -9,7 +9,7 @@ interface BarItemProps {
 };
 
 const Container = styled.ul`
-    width: 700px;
+    width: 100px;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -20,13 +20,9 @@ const Container = styled.ul`
     list-style: none;
 `;
 
-const BarContainer = css`
+const VerticalBarContainer = styled.div`
     position: absolute;
     top: 0;
-`;
-
-const VerticalBarContainer = styled.div`
-    ${BarContainer}
 `;
 
 const LowNaviBar: React.FC = React.memo(() => {
