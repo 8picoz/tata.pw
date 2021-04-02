@@ -19,12 +19,14 @@
   },
   "homepage": ".",
   "dependencies": {
+    "glslify-loader": "^2.0.0",
     "navi": "^0.14.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-navi": "^0.14.4",
     "react-redux": "^7.2.3",
     "redux": "^4.0.5",
+    "regl": "^2.1.0",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
