@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+import icon from "./tata.svg";
+
 const CardContainer = styled.div`
 
 `;
@@ -24,6 +26,7 @@ const NameCard: React.FC = () => {
 
     return (
         <CardContainer>
+            <img src={icon} />
             <p>{CardNameContent.name}</p>
         </CardContainer>
     );

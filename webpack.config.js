@@ -48,11 +48,8 @@ module.exports = {
                 use: [ "raw-loader" ],
             },
             {
-                test: /\.(svg)$/,
-                loader: "file-loader",
-                options: {
-                    name: "[path][name].[ext]",
-                },
+                test: /\.svg$/,
+                type: "asset/resource",
             },
         ],
     },
