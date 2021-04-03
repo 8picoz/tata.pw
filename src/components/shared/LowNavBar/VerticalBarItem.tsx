@@ -9,7 +9,7 @@ const VerticalBarItemContainer = styled.li`
     writing-mode: vertical-rl;
     text-align: center;
     color: #DDDDDD;
-    background-color: #333333;
+    background-color: #252525;
     cursor: pointer;
     transition: all 0.1s;
 
