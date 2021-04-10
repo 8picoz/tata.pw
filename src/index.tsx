@@ -5,11 +5,19 @@ import { App } from "./components/App";
 
 const GlobalStyle = createGlobalStyle`
     body {
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+        color: #DDDDDD;
         background-color: #131313;
         font-family: 'Lato', sans-serif;
         margin: 0;
         padding: 0;
+
+        a:visited {
+            color: #DDDDDD;
+        }
+        
+        a:hover {
+            color: #666666;
+        }
     }
 `;
 
