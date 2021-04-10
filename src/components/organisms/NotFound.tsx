@@ -1,11 +1,15 @@
 import React from "react";
+import styled from "styled-components";
+
+const Container = styled.h1`
+    text-align: center;
+`;
 
 const NotFound = () => {
     return (
-        <div>
-            <h1>404 - Not Found</h1>
-        </div>
+        <Container>404 - Not Found</Container>
     );
 };
 
 export { NotFound };
+
