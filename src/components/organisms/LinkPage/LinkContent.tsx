@@ -9,13 +9,13 @@ interface Props {
 
 const Container = styled.div`
     text-align: center;
-    font-size: 20px;
+    font-size: 23px;
 `;
 
 const LinkContent: React.FC<Props> = (props) => {
     return (
         <Container>
-            <p>{props.linkTargetServiceName}: <a href={props.linkUrl}>@{props.targetServiceId}</a></p>
+            <p>{props.linkTargetServiceName}: <a href={props.linkUrl}>{props.targetServiceId}</a></p>
         </Container>
     );
 };

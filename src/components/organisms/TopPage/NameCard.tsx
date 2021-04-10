@@ -50,7 +50,7 @@ const PTagContainer = styled.div`
 
     p {
         text-align: center;
-        font-size: 20px;
+        font-size: 23px;
     }
 `;
 
