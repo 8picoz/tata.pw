@@ -4,7 +4,6 @@ import icon from "./assets/tata.svg";
 
 
 const CardContainer = styled.div`
-    color: #DDDDDD;
     height: 300px;
     width: 500px;
     border: 1px groove #DDDDDD;
