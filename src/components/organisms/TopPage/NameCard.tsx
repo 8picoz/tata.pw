@@ -55,25 +55,20 @@ const PTagContainer = styled.div`
     }
 `;
 
-interface CardNameContentType {
+interface CardNameContentProps {
     name: string;
     HN: string;
 };
 
-const CardNameContent: CardNameContentType = {
-    name: "Ohta Yuya",
-    HN: "tata",
-};
-
-const NameCard: React.FC = () => {
+const NameCard: React.FC<CardNameContentProps> = (props) => {
 
     return (
         <CardContainer>
             <CardImageContainer><img src={icon} width={200} height={200} /></CardImageContainer>
             <CardContentContainer>
                 <PTagContainer>
-                    <p>{CardNameContent.name}</p>
-                    <p>{CardNameContent.HN}</p>
+                    <p>{props.name}</p>
+                    <p>{props.HN}</p>
                 </PTagContainer>
             </CardContentContainer>
         </CardContainer>

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { NameCard } from "../organisms/TopPage/NameCard";
 
-const TopPageContainer = styled.div`
+const Container = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
@@ -12,10 +12,11 @@ const TopPageContainer = styled.div`
 
 const Top: React.FC = () => {
     return (
-        <TopPageContainer>
-            <NameCard />
-        </TopPageContainer>
+        <Container>
+            <NameCard name="Yuya Ohta" HN="tata"/>
+        </Container>
     );
 };
 
 export { Top };
+
