@@ -5,4 +5,3 @@ const LINK = "/link";
 const CONTACT = "/contact";
 
 export { ROOT, WEBGL_PLAYGROUND, BLOG, LINK, CONTACT };
-

@@ -4,16 +4,15 @@ import { routes } from "../lib/routes";
 import { Layout } from "./Layout";
 
 const App: React.FC = () => {
-    return (
-        <Router routes={routes}>
-            <Suspense fallback={<h1>Loading view...</h1>}>
-                <Layout>
-                    <View />
-                </Layout>
-            </Suspense>
-        </Router>
-    );
+  return (
+    <Router routes={routes}>
+      <Suspense fallback={<h1>Loading view...</h1>}>
+        <Layout>
+          <View />
+        </Layout>
+      </Suspense>
+    </Router>
+  );
 };
 
 export { App };
-

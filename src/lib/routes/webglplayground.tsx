@@ -3,7 +3,7 @@ import React from "react";
 import { WebGLPlayground } from "../../components/pages/WebGLPlayground";
 
 export default mount({
-    "/": route(async () => {
-        return { view: <WebGLPlayground /> };
-    }),
+  "/": route(async () => {
+    return { view: <WebGLPlayground /> };
+  }),
 });

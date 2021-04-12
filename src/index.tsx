@@ -14,7 +14,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 ReactDOM.render(
-    <>
-        <GlobalStyle />
-        <App />
-    </>, document.getElementById("app"));
+  <>
+    <GlobalStyle />
+    <App />
+  </>,
+  document.getElementById("app")
+);
