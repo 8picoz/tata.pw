@@ -10,14 +10,6 @@ const GlobalStyle = createGlobalStyle`
         font-family: 'Lato', sans-serif;
         margin: 0;
         padding: 0;
-
-        a:visited {
-            color: #DDDDDD;
-        }
-        
-        a:hover {
-            color: #666666;
-        }
     }
 `;
 

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BLOG, CONTACT, LINK, ROOT, WEBGL_PLAYGROUND } from "../../../lib/constants/path";
+import { BLOG, LINK, ROOT, WEBGL_PLAYGROUND } from "../../../lib/constants/path";
 import { VerticalBarItem } from "./VerticalBarItem";
 
 interface BarItemProps {
@@ -29,17 +29,16 @@ const Container = styled.ul`
     justify-content: space-around;
 `;
 
-const LowNaviBar: React.FC = React.memo(() => {
+const NaviBar: React.FC = React.memo(() => {
     return (
         <Container>
             <VerticalBarItem link={ROOT} description={"Top"} />
             <VerticalBarItem link={WEBGL_PLAYGROUND} description={"WebGL Playground"} />
             <VerticalBarItem link={BLOG} description={"blog"} />
             <VerticalBarItem link={LINK} description={"link"} />
-            <VerticalBarItem link={CONTACT} description={"contact"} />
         </Container>
     );
 });
 
-export { LowNaviBar, BarItemProps };
+export { NaviBar, BarItemProps };
 

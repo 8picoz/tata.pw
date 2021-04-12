@@ -1,11 +1,11 @@
 import React, { useCallback } from "react";
 import { useNavigation } from "react-navi";
 import styled from "styled-components";
-import { BarItemProps } from "./LowNavBar";
+import { BarItemProps } from "./NavBar";
 
 const VerticalBarItemContainer = styled.li`
     width: 30px;
-    height: 150px;
+    height: 180px;
     writing-mode: vertical-rl;
     text-align: center;
     color: #DDDDDD;
