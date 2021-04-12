@@ -48,7 +48,7 @@ module.exports = {
                 use: [ "raw-loader", "glslify-loader" ],
             },
             {
-                test: /\.(svg|png)$/,
+                test: /\.(svg|png|jpg|asc)$/,
                 type: "asset/resource",
             },
         ],
