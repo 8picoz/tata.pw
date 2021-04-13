@@ -8,5 +8,6 @@ export const routes = mount({
     view: <Top />,
   }),
   "/webglplayground": lazy(() => import("./webglplayground")),
+  "/blog": lazy(() => import("./blog")),
   "/link": lazy(() => import("./link")),
 });
