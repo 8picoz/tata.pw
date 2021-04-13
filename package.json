@@ -21,6 +21,7 @@
   "homepage": ".",
   "dependencies": {
     "glslify-loader": "^2.0.0",
+    "gray-matter": "^4.0.2",
     "navi": "^0.14.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
