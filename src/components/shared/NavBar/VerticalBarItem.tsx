@@ -23,7 +23,7 @@ const VerticalBarItemContainer = styled.li`
   }
 `;
 
-const VerticalBarItem: React.FC<BarItemProps> = React.memo((props) => {
+const VerticalBarItem: React.VFC<BarItemProps> = React.memo((props) => {
   const navigation = useNavigation();
   const handleClickItem = useCallback(() => {
     navigation.navigate(props.link);

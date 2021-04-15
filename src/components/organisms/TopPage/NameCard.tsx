@@ -57,7 +57,7 @@ interface CardNameContentProps {
   HN: string;
 }
 
-const NameCard: React.FC<CardNameContentProps> = (props) => {
+const NameCard: React.VFC<CardNameContentProps> = (props) => {
   return (
     <CardContainer>
       <CardImageContainer>

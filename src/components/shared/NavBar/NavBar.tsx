@@ -34,7 +34,7 @@ const Container = styled.ul`
   justify-content: space-around;
 `;
 
-const NaviBar: React.FC = React.memo(() => {
+const NaviBar: React.VFC = React.memo(() => {
   return (
     <Container>
       <VerticalBarItem link={ROOT} description={"Top"} />

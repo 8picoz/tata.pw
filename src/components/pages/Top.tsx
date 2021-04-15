@@ -10,7 +10,7 @@ const Container = styled.div`
   transform: translate(-50%, -50%);
 `;
 
-const Top: React.FC = () => {
+const Top: React.VFC = () => {
   return (
     <Container>
       <NameCard name="Yuya Ohta" HN="tata" />

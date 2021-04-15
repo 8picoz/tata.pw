@@ -3,7 +3,7 @@ import pgpkey from "../organisms/LinkPage/assets/tata.asc";
 import { LinkContent } from "../organisms/LinkPage/LinkContent";
 import { ContentsContainer } from "../shared/ContentsContainer";
 
-const Link: React.FC = () => {
+const Link: React.VFC = () => {
   return (
     <ContentsContainer>
       <LinkContent

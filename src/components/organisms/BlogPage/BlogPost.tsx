@@ -10,7 +10,7 @@ interface Props {
 
 //blogに内包されたコンポーネント
 //TODO: もっと良い名前をつける
-const BlogPost: React.FC<Props> = (props) => {
+const BlogPost: React.VFC<Props> = (props) => {
   const [matter, setMatter] = useState({} as FrontMatter);
   const [md, setMdSource] = useRemark();
 
