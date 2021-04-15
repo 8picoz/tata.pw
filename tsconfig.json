@@ -20,7 +20,7 @@
         "plugins": [{ "name": "typescript-styled-plugin" }],
         "baseUrl": "./",
         "paths": {"svg": ["types/svg"]},
-        "typeRoots": ["types", "node_modules/@types"]
+        "typeRoots": ["types", "node_modules/@types"],
     },
-    "include": ["src/**/*"]
+    "include": ["src/**/*", "resource"]
 }

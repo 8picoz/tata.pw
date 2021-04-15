@@ -13,6 +13,10 @@ const copyRules = [
     from: __dirname + "/src/assets",
     to: __dirname + "/dist",
   },
+  {
+    from: __dirname + "/resource",
+    to: __dirname + "/dist/resource"
+  },
 ];
 
 module.exports = {
@@ -67,5 +71,8 @@ module.exports = {
     open: true,
     port: 8080,
   },
-  plugins: [new CopyPlugin({ patterns: copyRules })],
+  plugins: [
+    new CopyPlugin({ patterns: copyRules }),
+  ],
+  
 };

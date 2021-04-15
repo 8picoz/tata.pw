@@ -6,7 +6,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve",
     "build": "cross-env NODE_ENV=production webpack",
-    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,html}\""
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,html}\"",
+    "generate_path": "node ./resource/path_generator.ts ./resource"
   },
   "repository": {
     "type": "git",
@@ -20,12 +21,14 @@
   },
   "homepage": ".",
   "dependencies": {
+    "Buffer": "0.0.0",
     "glslify-loader": "^2.0.0",
     "gray-matter": "^4.0.2",
     "navi": "^0.14.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-navi": "^0.14.4",
+    "react-remark": "^2.0.3",
     "regl": "^2.1.0",
     "styled-components": "^5.2.1"
   },
