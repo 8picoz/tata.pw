@@ -1,7 +1,6 @@
 import React, { useCallback } from "react";
 import { useNavigation } from "react-navi";
 import styled from "styled-components";
-import { BarItemProps } from "./NavBar";
 
 const VerticalBarItemContainer = styled.li`
   width: 30px;
@@ -23,7 +22,12 @@ const VerticalBarItemContainer = styled.li`
   }
 `;
 
-const VerticalBarItem: React.VFC<BarItemProps> = React.memo((props) => {
+interface Props {
+  link: string;
+  description: string;
+}
+
+const VerticalBarItem: React.VFC<Props> = React.memo((props) => {
   const navigation = useNavigation();
   const handleClickItem = useCallback(() => {
     navigation.navigate(props.link);

@@ -8,11 +8,6 @@ import {
 } from "../../../lib/constants/path";
 import { VerticalBarItem } from "./VerticalBarItem";
 
-interface BarItemProps {
-  link: string;
-  description: string;
-}
-
 const Container = styled.ul`
   width: 100px;
   height: 100%;
@@ -48,4 +43,4 @@ const NaviBar: React.VFC = React.memo(() => {
   );
 });
 
-export { NaviBar, BarItemProps };
+export { NaviBar };
