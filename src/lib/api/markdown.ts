@@ -12,14 +12,15 @@ async function GetAllPostFileName(): Promise<ResourcePathFile> {
 }
 
 //TODO
-async function GetPostMarkdown(filePath: string): Promise<Markdown> {
-    const resp = await fetch(filePath);
+async function GetPostMarkdown(dirPath: string, fileName: string): Promise<Markdown> {
+    const resp = await fetch(dirPath + fileName);
     const post = await resp.text();
     const { data, content } = matter(post);
 
     return {
         matter: data as FrontMatter,
         md: content,
+        fileName: fileName,
     }
 }
 

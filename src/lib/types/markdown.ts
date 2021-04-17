@@ -5,6 +5,7 @@ interface FrontMatter {
 interface Markdown {
     matter: FrontMatter;
     md: string;
+    fileName: string;
 }
 
 interface ResourcePathFile {

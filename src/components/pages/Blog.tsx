@@ -5,7 +5,7 @@ import { BlogPost } from "../organisms/BlogPage/BlogPost";
 const Blog: React.VFC = () => {
   return (
     <div>
-      <BlogPost postPath={BLOGPOST_DIR_URL + "/20210412.md"} />
+      <BlogPost postDirPath={BLOGPOST_DIR_URL} postFileName={"20210412.md"} />
     </div>
   );
 };

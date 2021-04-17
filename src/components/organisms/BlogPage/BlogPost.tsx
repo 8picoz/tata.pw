@@ -1,33 +1,44 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect } from "react";
+import { useNavigation } from "react-navi";
 import { useRemark } from "react-remark";
-import { FrontMatter } from "src/lib/types/markdown";
 import { GetPostMarkdown } from "../../../lib/api/markdown";
 import { ContentsContainer } from "../../shared/ContentsContainer";
+import { ReadMoreButton } from "../../shared/ReadMoreButton";
 
 interface Props {
-  postPath: string;
+  postDirPath: string;
+  postFileName: string;
 }
 
-//blogに内包されたコンポーネント
-//TODO: もっと良い名前をつける
+const STRING_LIMIT = 200;
+
 const BlogPost: React.VFC<Props> = (props) => {
-  const [matter, setMatter] = useState({} as FrontMatter);
+  const navigation = useNavigation();
   const [md, setMdSource] = useRemark();
+  const handleClickReadMoreButton = useCallback(() => {
+    navigation.navigate("/blog/" + props.postFileName);
+  }, []);
 
   useEffect(() => {
     const f = async () => {
-      const data = await GetPostMarkdown(props.postPath);
-      console.log(data);
-      setMdSource(data.md);
-      setMatter(data.matter);
+      const data = await GetPostMarkdown(props.postDirPath, props.postFileName);
+
+      let mdSource = data.md;
+
+      if (mdSource.length > 200) {
+        mdSource = mdSource.substr(0, STRING_LIMIT);
+        mdSource += "...";
+      }
+
+      setMdSource(mdSource);
     };
     f();
   }, []);
 
   return (
     <ContentsContainer>
-      <h1>{matter.title}</h1>
       <p>{md}</p>
+      <ReadMoreButton text="More" onClick={handleClickReadMoreButton} />
     </ContentsContainer>
   );
 };
