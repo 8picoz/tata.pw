@@ -2,8 +2,9 @@ import React, { useCallback, useEffect } from "react";
 import { useNavigation } from "react-navi";
 import { useRemark } from "react-remark";
 import { GetPostMarkdown } from "../../../lib/api/markdown";
+import { BLOG } from "../../../lib/constants/path";
+import { Button } from "../../shared/Button";
 import { ContentsContainer } from "../../shared/ContentsContainer";
-import { ReadMoreButton } from "../../shared/ReadMoreButton";
 
 interface Props {
   postDirPath: string;
@@ -16,7 +17,7 @@ const BlogPost: React.VFC<Props> = (props) => {
   const navigation = useNavigation();
   const [md, setMdSource] = useRemark();
   const handleClickReadMoreButton = useCallback(() => {
-    navigation.navigate("/blog/" + props.postFileName);
+    navigation.navigate(BLOG + "/" + props.postFileName);
   }, []);
 
   useEffect(() => {
@@ -32,13 +33,14 @@ const BlogPost: React.VFC<Props> = (props) => {
 
       setMdSource(mdSource);
     };
+
     f();
   }, []);
 
   return (
     <ContentsContainer>
-      <p>{md}</p>
-      <ReadMoreButton text="More" onClick={handleClickReadMoreButton} />
+      {md}
+      <Button text="More" onClick={handleClickReadMoreButton} />
     </ContentsContainer>
   );
 };

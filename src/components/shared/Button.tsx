@@ -29,7 +29,7 @@ interface Props {
   onClick: (event: React.MouseEvent<HTMLInputElement>) => void;
 }
 
-const ReadMoreButton: React.VFC<Props> = (props) => {
+const Button: React.VFC<Props> = (props) => {
   return (
     <Container onClick={props.onClick}>
       <p>{props.text}</p>
@@ -37,4 +37,4 @@ const ReadMoreButton: React.VFC<Props> = (props) => {
   );
 };
 
-export { ReadMoreButton };
+export { Button };
