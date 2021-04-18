@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const Container = styled.div`
+const BaseContainer = styled.div`
   margin: 0 0 0 auto;
 
   width: 80px;
@@ -29,12 +29,16 @@ interface Props {
   onClick: (event: React.MouseEvent<HTMLInputElement>) => void;
 }
 
-const Button: React.VFC<Props> = (props) => {
+const BaseButton: React.VFC<Props> = (props) => {
   return (
-    <Container onClick={props.onClick}>
+    <BaseContainer onClick={props.onClick}>
       <p>{props.text}</p>
-    </Container>
+    </BaseContainer>
   );
 };
 
-export { Button };
+const ReadMoreButton = styled(BaseButton)``;
+
+const BackButton = styled(BaseButton)``;
+
+export { BaseButton, ReadMoreButton, BackButton };

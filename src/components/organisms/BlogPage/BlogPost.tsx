@@ -3,7 +3,7 @@ import { useNavigation } from "react-navi";
 import { useRemark } from "react-remark";
 import { GetPostMarkdown } from "../../../lib/api/markdown";
 import { BLOG } from "../../../lib/constants/path";
-import { Button } from "../../shared/Button";
+import { ReadMoreButton } from "../../shared/Buttons";
 import { ContentsContainer } from "../../shared/ContentsContainer";
 
 interface Props {
@@ -40,7 +40,7 @@ const BlogPost: React.VFC<Props> = (props) => {
   return (
     <ContentsContainer>
       {md}
-      <Button text="More" onClick={handleClickReadMoreButton} />
+      <ReadMoreButton text="More" onClick={handleClickReadMoreButton} />
     </ContentsContainer>
   );
 };

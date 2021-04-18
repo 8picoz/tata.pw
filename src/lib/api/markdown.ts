@@ -2,7 +2,6 @@ import matter from "gray-matter";
 import { RESOURCE_PATH_FILE_URL } from "../constants/path";
 import { FrontMatter, Markdown, ResourcePathFile } from "../types/markdown";
 
-//webフロントなのでfsではなくhttpで取ってくるようにする
 //path_generatorがjsonを作成する
 async function GetAllPostFileName(): Promise<ResourcePathFile> {
     const resp = await fetch(RESOURCE_PATH_FILE_URL);
