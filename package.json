@@ -6,9 +6,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve",
     "build": "cross-env NODE_ENV=production webpack",
-    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,html}\"",
-    "generate_path": "node ./resource/path_generator.ts ./resource"
-  },
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,html}\""
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/8picomu/Typescript-Playground.git"

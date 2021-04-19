@@ -47,7 +47,7 @@ const Blog: React.VFC = () => {
 
   return (
     <div>
-      {fileNames.blog.length != undefined &&
+      {fileNames.blog.length !== undefined &&
         fileNames.blog.map((data, i) => {
           return (
             <BlogPost
