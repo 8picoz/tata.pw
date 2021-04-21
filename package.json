@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve",
-    "build": "cross-env NODE_ENV=production webpack"
-  },
+    "build": "cross-env NODE_ENV=production webpack",
+    "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,html}\""
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/8picomu/Typescript-Playground.git"
@@ -17,29 +18,36 @@
   "bugs": {
     "url": "https://github.com/8picomu/Typescript-Playground/issues"
   },
-  "homepage": "https://github.com/8picomu/Typescript-Playground#readme",
+  "homepage": ".",
   "dependencies": {
+    "Buffer": "0.0.0",
+    "glslify-loader": "^2.0.0",
+    "gray-matter": "^4.0.2",
     "navi": "^0.14.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-navi": "^0.14.4",
-    "react-redux": "^7.2.3",
-    "redux": "^4.0.5"
+    "react-remark": "^2.0.3",
+    "regl": "^2.1.0",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.35",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
-    "@types/react-redux": "^7.1.16",
+    "@types/styled-components": "^5.1.9",
     "@types/webpack": "^4.41.26",
     "@types/webpack-dev-server": "^3.11.2",
     "copy-webpack-plugin": "^8.1.0",
     "cross-env": "^7.0.3",
     "css-loader": "^5.1.4",
+    "prettier": "^2.2.1",
+    "raw-loader": "^4.0.2",
     "style-loader": "^2.0.0",
     "ts-loader": "^8.0.18",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
+    "typescript-styled-plugin": "^0.15.0",
     "webpack": "^5.27.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
