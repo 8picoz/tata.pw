@@ -19,7 +19,7 @@ struct BlogJson {
 
 #[derive(Debug, Serialize, Deserialize)]
 struct ShaderJson {
-    webgl: Vec<String>,
+    shader: Vec<String>,
 }
 
 fn main() {    
@@ -37,16 +37,16 @@ fn main() {
         eprintln!("It isn't existent blog folder.");
         std::process::exit(1);
     });
-    let webgl_paths = fs::read_dir(webgl_post).unwrap_or_else(|_| {
+    let shader_paths = fs::read_dir(webgl_post).unwrap_or_else(|_| {
         eprintln!("It isn't existent blog folder.");
         std::process::exit(1);
     });
 
     let mut blog_paths: Vec<String> = blog_paths.into_iter().map(|item| item.unwrap().file_name().into_string().unwrap()).collect();
-    let mut webgl_paths: Vec<String> = webgl_paths.into_iter().map(|item| item.unwrap().file_name().into_string().unwrap()).collect();
+    let mut shader_paths: Vec<String> = shader_paths.into_iter().map(|item| item.unwrap().file_name().into_string().unwrap()).collect();
 
     blog_paths.sort_by(|a, b| b.cmp(a));
-    webgl_paths.sort_by(|a, b| b.cmp(a));
+    shader_paths.sort_by(|a, b| b.cmp(a));
 
     let j = BlogJson { blog: blog_paths };
     let data = serde_json::to_string(&j).unwrap();
@@ -59,7 +59,7 @@ fn main() {
 
     println!("{:?}; generated", data);
 
-    let j = BlogJson { blog: webgl_paths };
+    let j = ShaderJson { shader: shader_paths };
     let data = serde_json::to_string(&j).unwrap();
 
     let resource_path = dir.join(SHADER_RESOURCE_PATH_PATH);

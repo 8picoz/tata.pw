@@ -10,7 +10,7 @@ async function GetAllBlogPostFileName(): Promise<BlogResourcePathFile> {
     return await resp.json();
 }
 
-async function GetAllShaderPostFileName(): Promise<ShaderResourcePathFile> {
+async function GetAllShaderPostDirName(): Promise<ShaderResourcePathFile> {
     const resp = await fetch(SHADER_RESOURCE_PATH_FILE_URL);
 
     return await resp.json();
@@ -29,5 +29,5 @@ async function GetPostMarkdown(dirPath: string, fileName: string): Promise<Markd
     }
 }
 
-export { GetAllBlogPostFileName, GetPostMarkdown };
+export { GetAllBlogPostFileName, GetAllShaderPostDirName, GetPostMarkdown };
 
