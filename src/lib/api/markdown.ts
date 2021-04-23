@@ -1,10 +1,10 @@
 import matter from "gray-matter";
-import { RESOURCE_PATH_FILE_URL } from "../constants/path";
+import { BLOG_RESOURCE_PATH_FILE_URL } from "../constants/path";
 import { FrontMatter, Markdown, ResourcePathFile } from "../types/markdown";
 
 //path_generatorがjsonを作成する
-async function GetAllPostFileName(): Promise<ResourcePathFile> {
-    const resp = await fetch(RESOURCE_PATH_FILE_URL);
+async function GetAllBlogPostFileName(): Promise<ResourcePathFile> {
+    const resp = await fetch(BLOG_RESOURCE_PATH_FILE_URL);
 
     //jsonの型のバリデーションは走らないので注意
     return await resp.json();
@@ -23,5 +23,5 @@ async function GetPostMarkdown(dirPath: string, fileName: string): Promise<Markd
     }
 }
 
-export { GetAllPostFileName, GetPostMarkdown };
+export { GetAllBlogPostFileName, GetPostMarkdown };
 

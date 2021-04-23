@@ -1,5 +1,5 @@
 import React, { useEffect, useReducer } from "react";
-import { GetAllPostFileName } from "../../lib/api/markdown";
+import { GetAllBlogPostFileName } from "../../lib/api/markdown";
 import { BLOGPOST_DIR_URL } from "../../lib/constants/path";
 import { BlogPost } from "../organisms/BlogPage/BlogPost";
 
@@ -32,7 +32,7 @@ const Blog: React.VFC = () => {
 
   useEffect(() => {
     const f = async () => {
-      const data = await GetAllPostFileName();
+      const data = await GetAllBlogPostFileName();
 
       dispatch({
         type: "update",
