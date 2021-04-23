@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer } from "react";
 import { GetAllBlogPostFileName } from "../../lib/api/markdown";
-import { BLOGPOST_DIR_URL } from "../../lib/constants/path";
+import { BLOG_POST_DIR_URL } from "../../lib/constants/path";
 import { BlogPost } from "../organisms/BlogPage/BlogPost";
 
 interface store {
@@ -52,7 +52,7 @@ const Blog: React.VFC = () => {
           return (
             <BlogPost
               key={i}
-              postDirPath={BLOGPOST_DIR_URL}
+              postDirPath={BLOG_POST_DIR_URL}
               postFileName={data}
             />
           );

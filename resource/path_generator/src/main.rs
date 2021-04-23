@@ -9,8 +9,8 @@ use serde::{Serialize, Deserialize};
 const BLOG_POST_DIR: &str = "blog/markdown/";
 const BLOG_RESOURCE_PATH_PATH: &str = "blogResourcePath.json";
 
-const WEBGL_POST_DIR: &str = "webgl/";
-const WEBGL_RESOURCE_PATH_PATH: &str = "webglResourcePath.json";
+const SHADER_POST_DIR: &str = "shader/";
+const SHADER_RESOURCE_PATH_PATH: &str = "shaderResourcePath.json";
 
 #[derive(Debug, Serialize, Deserialize)]
 struct BlogJson {
@@ -18,7 +18,7 @@ struct BlogJson {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-struct WebglJson {
+struct ShaderJson {
     webgl: Vec<String>,
 }
 
@@ -31,7 +31,7 @@ fn main() {
     let dir = Path::new(&args[1]);
 
     let blog_post = dir.join(BLOG_POST_DIR);
-    let webgl_post = dir.join(WEBGL_POST_DIR);
+    let webgl_post = dir.join(SHADER_POST_DIR);
 
     let blog_paths = fs::read_dir(blog_post).unwrap_or_else(|_| {
         eprintln!("It isn't existent blog folder.");
@@ -62,7 +62,7 @@ fn main() {
     let j = BlogJson { blog: webgl_paths };
     let data = serde_json::to_string(&j).unwrap();
 
-    let resource_path = dir.join(WEBGL_RESOURCE_PATH_PATH);
+    let resource_path = dir.join(SHADER_RESOURCE_PATH_PATH);
 
     let mut f = File::create(resource_path).unwrap();
 

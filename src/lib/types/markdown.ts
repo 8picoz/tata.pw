@@ -8,9 +8,13 @@ interface Markdown {
     fileName: string;
 }
 
-interface ResourcePathFile {
+interface BlogResourcePathFile {
     blog: string[];
 }
 
-export { FrontMatter, Markdown, ResourcePathFile };
+interface ShaderResourcePathFile {
+    shader: string[],
+}
+
+export { FrontMatter, Markdown, BlogResourcePathFile, ShaderResourcePathFile };
 
