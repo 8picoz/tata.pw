@@ -1,7 +1,8 @@
 import React from "react";
+import { UnderConstruction } from "../organisms/UnderConstruction";
 
 const WebGLPlayground: React.VFC = () => {
-  return <div>this is WebGLPlayground</div>;
+  return <UnderConstruction />;
 };
 
 export { WebGLPlayground };
