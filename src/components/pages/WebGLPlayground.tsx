@@ -52,8 +52,8 @@ const WebGLPlayground: React.VFC = () => {
           return (
             <ShaderPost
               key={i}
-              postDirName={SHADER_POST_DIR_URL}
-              postDirPath={data}
+              postDirPath={SHADER_POST_DIR_URL}
+              postDirName={data}
             />
           );
         })}
