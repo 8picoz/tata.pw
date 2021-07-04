@@ -17,6 +17,10 @@ const copyRules = [
     from: __dirname + "/resource",
     to: __dirname + "/dist/resource"
   },
+  {
+    from: __dirname + "/favicon",
+    to: __dirname + "/dist"
+  },
 ];
 
 module.exports = {
