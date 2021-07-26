@@ -26,7 +26,7 @@ const Post: React.VFC<Props> = (props) => {
     };
 
     f();
-  });
+  }, []);
 
   return (
     <ContentsContainer>
