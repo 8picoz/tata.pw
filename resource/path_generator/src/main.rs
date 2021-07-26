@@ -42,7 +42,7 @@ fn main() {
         std::process::exit(1);
     });
 
-    let mut blog_paths: Vec<String> = blog_paths.into_iter().map(|item| item.unwrap().file_name().into_string().unwrap()).collect();
+    let mut blog_paths: Vec<String> = blog_paths.into_iter().map(|item| item.unwrap().file_name().into_string().unwrap().replace(".md", "")).collect();
     let mut shader_paths: Vec<String> = shader_paths.into_iter().map(|item| item.unwrap().file_name().into_string().unwrap()).collect();
 
     blog_paths.sort_by(|a, b| b.cmp(a));
