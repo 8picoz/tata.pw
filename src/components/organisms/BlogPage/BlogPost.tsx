@@ -22,7 +22,10 @@ const BlogPost: React.VFC<Props> = (props) => {
 
   useEffect(() => {
     const f = async () => {
-      const data = await GetPostMarkdown(props.postDirPath, props.postFileName);
+      const data = await GetPostMarkdown(
+        props.postDirPath,
+        props.postFileName + ".md"
+      );
 
       let mdSource = data.md;
 
