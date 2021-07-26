@@ -1,4 +1,5 @@
 const CopyPlugin = require("copy-webpack-plugin");
+const webpack = require("webpack");
 
 const MODE = process.env.NODE_ENV || "development";
 const PROD = MODE === "production";
@@ -69,9 +70,6 @@ module.exports = {
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
-    fallback: {
-      "buffer": require.resolve("buffer/"),
-    },
   },
   devServer: {
     historyApiFallback: true,
@@ -80,6 +78,9 @@ module.exports = {
   },
   plugins: [
     new CopyPlugin({ patterns: copyRules }),
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+    }),
   ],
   
 };
