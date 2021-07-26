@@ -1,8 +1,64 @@
-import React from "react";
-import { UnderConstruction } from "../organisms/UnderConstruction";
+import React, { useEffect, useReducer } from "react";
+import { GetAllBlogPostFileName } from "../../lib/api/markdown";
+import { BLOG_POST_DIR_URL } from "../../lib/constants/path";
+import { BlogPost } from "../organisms/BlogPage/BlogPost";
+
+interface store {
+  blog: string[];
+}
+
+interface actionType {
+  type: "update";
+  payload: {
+    blog: string[];
+  };
+}
+
+const initialState: store = {
+  blog: {} as string[],
+};
+
+const reducer: React.Reducer<store, actionType> = (state, action) => {
+  switch (action.type) {
+    case "update":
+      return { blog: action.payload.blog };
+    default:
+      return state;
+  }
+};
 
 const Blog: React.VFC = () => {
-  return <UnderConstruction />;
+  const [fileNames, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    const f = async () => {
+      const data = await GetAllBlogPostFileName();
+
+      dispatch({
+        type: "update",
+        payload: {
+          blog: data.blog,
+        },
+      });
+    };
+
+    f();
+  }, []);
+
+  return (
+    <div>
+      {fileNames.blog.length !== undefined &&
+        fileNames.blog.map((data, i) => {
+          return (
+            <BlogPost
+              key={i}
+              postDirPath={BLOG_POST_DIR_URL}
+              postFileName={data}
+            />
+          );
+        })}
+    </div>
+  );
 };
 
 export { Blog };

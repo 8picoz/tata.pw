@@ -8,6 +8,8 @@ const ContainerStyle = styled.div`
   padding: 10px;
   border-right: groove #999999 1px;
   border-left: groove #999999 1px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 `;
 
 const ContentsContainer: React.FC = ({ children }) => {
