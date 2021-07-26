@@ -69,6 +69,9 @@ module.exports = {
 
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".jsx"],
+    fallback: {
+      "buffer": require.resolve("buffer/"),
+    },
   },
   devServer: {
     historyApiFallback: true,
