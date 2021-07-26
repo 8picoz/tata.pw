@@ -20,7 +20,7 @@
   },
   "homepage": ".",
   "dependencies": {
-    "Buffer": "0.0.0",
+    "Buffer": "^0.0.0",
     "gl-matrix": "^3.3.0",
     "glslify-loader": "^2.0.0",
     "gray-matter": "^4.0.2",
