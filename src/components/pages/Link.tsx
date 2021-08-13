@@ -9,22 +9,22 @@ const Link: React.VFC = () => {
       <LinkContent
         linkTargetServiceName="twitter"
         targetServiceId="8picumu"
-        linkUrl="https://twitter.com/8picomu"
+        linkUrl="https://twitter.com/8picoz"
       />
       <LinkContent
         linkTargetServiceName="github"
-        targetServiceId="8picomu"
-        linkUrl="https://github.com/8picomu"
+        targetServiceId="8picoz"
+        linkUrl="https://github.com/8picoz"
       />
       <LinkContent
         linkTargetServiceName="scrapbox"
-        targetServiceId="8picomu"
-        linkUrl="https://scrapbox.io/8picomu/"
+        targetServiceId="8picoz"
+        linkUrl="https://scrapbox.io/8picoz/"
       />
       <LinkContent
         linkTargetServiceName="mail"
-        targetServiceId="8picomu@tata.pw"
-        linkUrl="mailto:8picomu@tata.pw"
+        targetServiceId="8picoz@tata.pw"
+        linkUrl="mailto:8picoz@tata.pw"
       >
         <a href={pgpkey} download="tata.asc">
           PGP
