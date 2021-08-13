@@ -8,7 +8,7 @@ const Link: React.VFC = () => {
     <ContentsContainer>
       <LinkContent
         linkTargetServiceName="twitter"
-        targetServiceId="8picumu"
+        targetServiceId="8picoz"
         linkUrl="https://twitter.com/8picoz"
       />
       <LinkContent
