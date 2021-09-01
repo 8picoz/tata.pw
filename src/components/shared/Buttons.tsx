@@ -14,6 +14,8 @@ const BaseContainer = styled.div`
   -webkit-user-select: none;
   user-select: none;
 
+  cursor: pointer;
+
   p {
     text-align: center;
     line-height: 30px;
