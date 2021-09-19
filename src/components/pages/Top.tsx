@@ -13,7 +13,7 @@ const Container = styled.div`
 const Top: React.VFC = () => {
   return (
     <Container>
-      <NameCard name="Yuya Ohta" HN="tata" />
+      <NameCard id="8picoz" HN="tata" />
     </Container>
   );
 };

@@ -53,7 +53,7 @@ const PTagContainer = styled.div`
 `;
 
 interface CardNameContentProps {
-  name: string;
+  id: string;
   HN: string;
 }
 
@@ -65,7 +65,7 @@ const NameCard: React.VFC<CardNameContentProps> = (props) => {
       </CardImageContainer>
       <CardContentContainer>
         <PTagContainer>
-          <p>{props.name}</p>
+          <p>{props.id}</p>
           <p>{props.HN}</p>
         </PTagContainer>
       </CardContentContainer>
