@@ -2,6 +2,7 @@ import React, { useEffect, useReducer } from "react";
 import { GetAllBlogPostFileName } from "../../lib/api/markdown";
 import { BLOG_POST_DIR_URL } from "../../lib/constants/path";
 import { BlogPost } from "../organisms/BlogPage/BlogPost";
+import { PageNaviBar } from "../organisms/BlogPage/PageNaviBar";
 
 interface store {
   blog: string[];
@@ -57,6 +58,7 @@ const Blog: React.VFC = () => {
             />
           );
         })}
+      <PageNaviBar></PageNaviBar>
     </div>
   );
 };
