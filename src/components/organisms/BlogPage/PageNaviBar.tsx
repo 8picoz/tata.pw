@@ -16,18 +16,24 @@ const InnerContent = styled.div`
   margin: 0 10px;
 `;
 
-const PageNaviBar: React.VFC = () => {
+interface Props {
+  length: number;
+}
+
+const PageNaviBar: React.VFC<Props> = (props) => {
   return (
     <PageNaviBarContainer>
-      <Inner>
-        <InnerContent>&lt;</InnerContent>
-        <InnerContent>1</InnerContent>
-        <InnerContent>...</InnerContent>
-        <InnerContent>2</InnerContent>
-        <InnerContent>...</InnerContent>
-        <InnerContent>3</InnerContent>
-        <InnerContent>&gt;</InnerContent>
-      </Inner>
+      {props.length > 4 && (
+        <Inner>
+          <InnerContent>&lt;</InnerContent>
+          <InnerContent>1</InnerContent>
+          <InnerContent>...</InnerContent>
+          <InnerContent>2</InnerContent>
+          <InnerContent>...</InnerContent>
+          <InnerContent>3</InnerContent>
+          <InnerContent>&gt;</InnerContent>
+        </Inner>
+      )}
     </PageNaviBarContainer>
   );
 };

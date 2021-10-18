@@ -58,7 +58,10 @@ const Blog: React.VFC = () => {
             />
           );
         })}
-      <PageNaviBar></PageNaviBar>
+
+      {fileNames.blog.length !== undefined && (
+        <PageNaviBar length={fileNames.blog.length}></PageNaviBar>
+      )}
     </div>
   );
 };
