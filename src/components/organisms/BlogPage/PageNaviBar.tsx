@@ -18,22 +18,25 @@ const InnerContent = styled.div`
 
 interface Props {
   length: number;
+  notPosition: number;
 }
 
 const PageNaviBar: React.VFC<Props> = (props) => {
+  if (props.length <= 4) {
+    return <div></div>;
+  }
+
   return (
     <PageNaviBarContainer>
-      {props.length > 4 && (
-        <Inner>
-          <InnerContent>&lt;</InnerContent>
-          <InnerContent>1</InnerContent>
-          <InnerContent>...</InnerContent>
-          <InnerContent>2</InnerContent>
-          <InnerContent>...</InnerContent>
-          <InnerContent>3</InnerContent>
-          <InnerContent>&gt;</InnerContent>
-        </Inner>
-      )}
+      <Inner>
+        <InnerContent>&lt;</InnerContent>
+        <InnerContent>1</InnerContent>
+        <InnerContent>...</InnerContent>
+        <InnerContent>2</InnerContent>
+        <InnerContent>...</InnerContent>
+        <InnerContent>3</InnerContent>
+        <InnerContent>&gt;</InnerContent>
+      </Inner>
     </PageNaviBarContainer>
   );
 };
