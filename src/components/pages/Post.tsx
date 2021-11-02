@@ -1,6 +1,8 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useNavigation } from "react-navi";
 import { useRemark } from "react-remark";
+import { FrontMatter } from "src/lib/types/markdown";
+import styled from "styled-components";
 import { GetPostMarkdown } from "../../lib/api/markdown";
 import { BLOG } from "../../lib/constants/path";
 import { BackButton } from "../shared/Buttons";
@@ -11,9 +13,14 @@ interface Props {
   postFileName: string;
 }
 
+const TitleText = styled.h1`
+  font-size: 36px;
+`;
+
 const Post: React.VFC<Props> = (props) => {
   const navigation = useNavigation();
   const [md, setMdSource] = useRemark();
+  const [matter, setMatter] = useState({} as FrontMatter);
   const handleClickBackButton = useCallback(() => {
     navigation.navigate(BLOG);
   }, []);
@@ -25,6 +32,7 @@ const Post: React.VFC<Props> = (props) => {
         props.postFileName + ".md"
       );
 
+      setMatter(data.matter);
       setMdSource(data.md);
     };
 
@@ -34,6 +42,7 @@ const Post: React.VFC<Props> = (props) => {
   return (
     <ContentsContainer>
       <BackButton text="back" onClick={handleClickBackButton} />
+      <TitleText>{matter.title}</TitleText>
       {md}
     </ContentsContainer>
   );

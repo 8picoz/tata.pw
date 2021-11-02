@@ -10,6 +10,18 @@ const ContainerStyle = styled.div`
   border-left: groove #999999 1px;
   word-wrap: break-word;
   overflow-wrap: break-word;
+
+  a {
+    color: #dddddd;
+  }
+
+  a:visited {
+    color: #dddddd;
+  }
+
+  a:hover {
+    color: #666666;
+  }
 `;
 
 const ContentsContainer: React.FC = ({ children }) => {
