@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import pgpkey from "../organisms/LinkPage/assets/tata.asc";
 import { LinkContent } from "../organisms/LinkPage/LinkContent";
 import { ContentsContainer } from "../shared/ContentsContainer";
 
 const Link: React.VFC = () => {
+  useEffect(() => {
+    document.title = "Link";
+  }, []);
+
   return (
     <ContentsContainer>
       <LinkContent

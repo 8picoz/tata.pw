@@ -34,6 +34,8 @@ const Post: React.VFC<Props> = (props) => {
 
       setMatter(data.matter);
       setMdSource(data.md);
+
+      document.title = data.matter.title;
     };
 
     f();
