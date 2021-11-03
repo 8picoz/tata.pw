@@ -32,6 +32,8 @@ const Blog: React.VFC = () => {
   const [fileNames, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
+    document.title = "Blog";
+
     const f = async () => {
       const data = await GetAllBlogPostFileName();
 

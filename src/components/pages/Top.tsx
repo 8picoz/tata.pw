@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import { NameCard } from "../organisms/TopPage/NameCard";
 
@@ -11,6 +11,10 @@ const Container = styled.div`
 `;
 
 const Top: React.VFC = () => {
+  useEffect(() => {
+    document.title = "tata.pw";
+  }, []);
+
   return (
     <Container>
       <NameCard id="8picoz" HN="tata" />
