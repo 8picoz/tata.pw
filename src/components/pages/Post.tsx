@@ -1,3 +1,7 @@
+import hljs from "highlight.js/lib/core";
+import cpp from "highlight.js/lib/languages/cpp";
+import rust from "highlight.js/lib/languages/rust";
+import "highlight.js/styles/atom-one-dark.css";
 import React, { useCallback, useEffect, useState } from "react";
 import { useNavigation } from "react-navi";
 import { useRemark } from "react-remark";
@@ -7,6 +11,9 @@ import { GetPostMarkdown } from "../../lib/api/markdown";
 import { BLOG } from "../../lib/constants/path";
 import { BackButton } from "../shared/Buttons";
 import { ContentsContainer } from "../shared/ContentsContainer";
+
+hljs.registerLanguage("rust", rust);
+hljs.registerLanguage("cpp", cpp);
 
 interface Props {
   postDirPath: string;
@@ -40,6 +47,10 @@ const Post: React.VFC<Props> = (props) => {
 
     f();
   }, []);
+
+  useEffect(() => {
+    hljs.initHighlighting();
+  });
 
   return (
     <ContentsContainer>
