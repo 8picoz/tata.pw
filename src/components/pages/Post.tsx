@@ -1,4 +1,5 @@
 import hljs from "highlight.js/lib/core";
+import cpp from "highlight.js/lib/languages/cpp";
 import rust from "highlight.js/lib/languages/rust";
 import "highlight.js/styles/atom-one-dark.css";
 import React, { useCallback, useEffect, useState } from "react";
@@ -12,6 +13,7 @@ import { BackButton } from "../shared/Buttons";
 import { ContentsContainer } from "../shared/ContentsContainer";
 
 hljs.registerLanguage("rust", rust);
+hljs.registerLanguage("cpp", cpp);
 
 interface Props {
   postDirPath: string;
