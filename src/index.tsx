@@ -11,15 +11,6 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
     }
-
-    pre {
-        margin: 1em 0;
-        padding: 1em;
-        border-radius: 5px;
-        background: #25292f;
-        color: #fff;
-        white-space: pre-wrap;
-    }
 `;
 
 ReactDOM.render(
