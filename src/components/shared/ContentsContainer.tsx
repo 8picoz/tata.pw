@@ -31,6 +31,11 @@ const ContainerStyle = styled.div`
     color: #fff;
     white-space: pre-wrap;
   }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 `;
 
 const ContentsContainer: React.FC = ({ children }) => {
