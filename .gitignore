@@ -116,3 +116,5 @@ dist
 .pnp.*
 
 resource/path_generator/target/
+
+.DS_Store
