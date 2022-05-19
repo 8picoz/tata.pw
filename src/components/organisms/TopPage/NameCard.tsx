@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import icon from "./assets/tata.svg";
+import icon from "./assets/tata.png";
 
 const CardContainer = styled.div`
   height: 300px;
